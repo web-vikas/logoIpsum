@@ -1,0 +1,13 @@
+.teams::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .teams {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .right{
+    right: -1000px !important;
+    transition: 1s ease-in-out;
+  }

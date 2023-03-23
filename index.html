@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>logoIpsum</title>
+    <link rel="stylesheet" href="./assest/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./assest/js/app.js"></script>
+  </head>
+  <body>
+    <header class="bg-white">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">logoIpsum</span>
+            <img
+              class="h-8 w-auto"
+              src="./assest/images/logo.svg"
+              alt="logoIpsum"
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            id="hamburger"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Home</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Course</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Mentor</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >About</a
+          >
+        </div>
+        <div
+          class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-5 items-center"
+        >
+          <a href="#" class="text-sm font-semibold leading-6 text-[#4540D9]"
+            >Log in</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-white bg-[#4540D9] rounded px-4 py-1"
+            >Sign up
+          </a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden right" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+       
+        <div
+        id="mobilemenu"
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 right ease-in-out" 
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">logoIpsum</span>
+              <img
+                class="h-8 w-auto"
+                src="./assest/images/logo.svg"
+                alt="logoIpsum"
+              />
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="closeMenu">
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Home</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Course</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Mentor</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >About</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Log in</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-white bg-[#4540D9]"
+                  >Sign Up</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      class="flex justify-center p-4 flex-col-reverse gap-y-8 md:flex-row lg:py-8 bg-gray-50"
+    >
+      <div class="flex flex-1 flex-col items-center">
+        <div>
+          <h1 class="font-bold text-5xl lg:text-7xl">
+            Online <span class="text-[#4540D9]">Learning</span>
+            <br class="hidden lg:block" />
+            you can access<br />
+            anywhere <span class="text-[#4540D9]">Easily</span>
+          </h1>
+          <div class="">
+            <p class="my-6">
+              a Solution for easy and flexible online learning. you can study
+              <br class="hidden md:block" />
+              anywhere through this platform
+            </p>
+          </div>
+          <div>
+            <button
+              class="bg-[#4540D9] text-white px-8 py-2 rounded-lg font-bold flex items-center gap-x-5"
+            >
+              Explore <span class="text-xl"> &darr;</span>
+            </button>
+          </div>
+          <div class="flex gap-y-3 gap-x-3 flex-wrap my-6">
+            <span class="flex gap-x-2">
+              <img src="./assest/images/check.svg" alt="check-svg" />
+              Experienced Mentors
+            </span>
+            <span class="flex gap-x-2">
+              <img src="./assest/images/check.svg" alt="check-svg" />
+              Experienced Mentors
+            </span>
+            <span class="flex gap-x-2">
+              <img src="./assest/images/check.svg" alt="check-svg" />
+              Experienced Mentors
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <img
+          src="./assest/images/landing-pattern.svg"
+          class="max-h-[80vh]"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="bg-white flex px-4 lg:px-20 py-8">
+      <div class="flex flex-col md:flex-row justify-center">
+        <div class="w-full p-3 flex flex-col">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Why online
+            <br class="hidden md:inline" />
+            Learning method
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-gray-600 max-w-sm">
+            Studying online teaches important time management skills, which
+            makes it easier for you to find a good work-study balance.
+          </p>
+        </div>
+        <div class="p-3">
+          <ul
+            role="list"
+            class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+          >
+            <li>
+              <div class="flex gap-y-1 flex-col">
+                <img class="h-16 w-16 rounded-full bg-gray-500" src="" alt="" />
+                <h3
+                  class="font-bold text-3xl leading-7 tracking-tight text-gray-900"
+                >
+                  500+
+                </h3>
+                <h3 class="font-bold text-3xl">Expert Mentors</h3>
+                <p class="text-sm font-semibold leading-6 text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur. Vulputate tortor
+                  pellentesque in integer donec etiam.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="flex gap-y-1 flex-col">
+                <img class="h-16 w-16 rounded-full bg-gray-500" src="" alt="" />
+                <h3
+                  class="font-bold text-3xl leading-7 tracking-tight text-gray-900"
+                >
+                  500+
+                </h3>
+                <h3 class="font-bold text-3xl">Expert Mentors</h3>
+                <p class="text-sm font-semibold leading-6 text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur. Vulputate tortor
+                  pellentesque in integer donec etiam.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="flex gap-y-1 flex-col">
+                <img class="h-16 w-16 rounded-full bg-gray-500" src="" alt="" />
+                <h3
+                  class="font-bold text-3xl leading-7 tracking-tight text-gray-900"
+                >
+                  500+
+                </h3>
+                <h3 class="font-bold text-3xl">Expert Mentors</h3>
+                <p class="text-sm font-semibold leading-6 text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur. Vulputate tortor
+                  pellentesque in integer donec etiam.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="flex gap-y-1 flex-col">
+                <img class="h-16 w-16 rounded-full bg-gray-500" src="" alt="" />
+                <h3
+                  class="font-bold text-3xl leading-7 tracking-tight text-gray-900"
+                >
+                  500+
+                </h3>
+                <h3 class="font-bold text-3xl">Expert Mentors</h3>
+                <p class="text-sm font-semibold leading-6 text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur. Vulputate tortor
+                  pellentesque in integer donec etiam.
+                </p>
+              </div>
+            </li>
+
+            <!-- More people... -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="lg:py-12 lg:px-12 px-6 py-6">
+      <div class="text-center">
+        <h1 class="font-bold text-3xl md:text-5xl">Our Team</h1>
+        <p class="text-base text-gray-600 py-3">
+          we are the company that rise coming leaders of india
+        </p>
+      </div>
+      <div class="bg-white flex items-center justify-center lg:py-12">
+        <ul
+          role="list"
+          class="flex w-full gap-6 lg:gap-20 overflow-y-hidden overflow-x-scroll teams"
+        >
+          <li class="w-2/5 min-w-[350px]">
+            <div
+              class="flex items-center px-8 py-3 bg-[#F1F1FB] rounded-lg gap-4"
+            >
+              <img
+                class="h-20 w-20 rounded-full border-8 border-white"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <div>
+                <h3
+                  class="text-2xl font-extrabold leading-7 tracking-wide text-gray-900"
+                >
+                  John Deo
+                </h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">
+                  App Developement
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="w-2/5 min-w-[300px]">
+            <div
+              class="flex items-center px-8 py-3 bg-[#158e8e4d] rounded-lg gap-4"
+            >
+              <img
+                class="h-20 w-20 rounded-full border-8 border-white"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <div>
+                <h3
+                  class="text-2xl font-extrabold leading-7 tracking-wide text-gray-900"
+                >
+                  John Deo
+                </h3>
+                <p class="text-sm font-semibold leading-6 text-[#158E8E]">
+                  App Developement
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="w-2/5 min-w-[300px]">
+            <div
+              class="flex items-center px-8 py-3 bg-[#c0a11d4d] rounded-lg gap-4"
+            >
+              <img
+                class="h-20 w-20 rounded-full border-8 border-white"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <div>
+                <h3
+                  class="text-2xl font-extrabold leading-7 tracking-wide text-gray-900"
+                >
+                  John Deo
+                </h3>
+                <p class="text-sm font-semibold leading-6 text-[#c0a11d]">
+                  App Developement
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="w-2/5 min-w-[300px]">
+            <div
+              class="flex items-center px-8 py-3 bg-[#c0a11d4d] rounded-lg gap-4"
+            >
+              <img
+                class="h-20 w-20 rounded-full border-8 border-white"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <div>
+                <h3
+                  class="text-2xl font-extrabold leading-7 tracking-wide text-gray-900"
+                >
+                  John Deo
+                </h3>
+                <p class="text-sm font-semibold leading-6 text-[#c0a11d]">
+                  App Developement
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="w-2/5 min-w-[300px]">
+            <div
+              class="flex items-center px-8 py-3 bg-[#c0a11d4d] rounded-lg gap-4"
+            >
+              <img
+                class="h-20 w-20 rounded-full border-8 border-white"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <div>
+                <h3
+                  class="text-2xl font-extrabold leading-7 tracking-wide text-gray-900"
+                >
+                  John Deo
+                </h3>
+                <p class="text-sm font-semibold leading-6 text-[#c0a11d]">
+                  App Developement
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="py-0 md:py-12 lg:px-12 px-6">
+      <div class="text-center">
+        <h1 class="font-bold text-3xl md:text-5xl">
+          Why this <br class="md:hidden" />
+          E-Learning <br class="hidden md:inline-block" />
+          Platform?
+        </h1>
+        <p class="text-base text-gray-600 py-3">
+          we are the company that rise coming leaders of india
+        </p>
+      </div>
+      <div class="flex flex-wrap py-20 gap-20 lg:gap-x-0">
+        <div
+          class="shadow-lg bg-white rounded-md max-w-xs mx-auto relative pt-12"
+        >
+          <img
+            class="h-24 w-24 absolute rounded-full top-[-35px] left-[35%]"
+            src="https://images.pexels.com/photos/90317/pexels-photo-90317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Hotel Room"
+          />
+          <div class="py-7 px-6">
+            <h1 class="text-2xl font-bold text-gray-800">Problem Solving</h1>
+            <hr class="mt-3 mb-5" />
+            <p>
+              Lorem ipsum dolor sit amet, adipiscing elit. Vestibulum fermentum
+              tortor... consectetuer adipiscing elit. Vestibulum fermentum
+              tortor..
+            </p>
+          </div>
+        </div>
+        <div
+          class="shadow-lg bg-white rounded-md max-w-xs mx-auto relative pt-12"
+        >
+          <img
+            class="h-24 w-24 absolute rounded-full top-[-35px] left-[35%]"
+            src="https://images.pexels.com/photos/90317/pexels-photo-90317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Hotel Room"
+          />
+          <div class="py-7 px-6">
+            <h1 class="text-2xl font-bold text-gray-800">Problem Solving</h1>
+            <hr class="mt-3 mb-5" />
+            <p>
+              Lorem ipsum dolor sit amet, adipiscing elit. Vestibulum fermentum
+              tortor... consectetuer adipiscing elit. Vestibulum fermentum
+              tortor..
+            </p>
+          </div>
+        </div>
+        <div
+          class="shadow-lg bg-white rounded-md max-w-xs mx-auto relative pt-12"
+        >
+          <img
+            class="h-24 w-24 absolute rounded-full top-[-35px] left-[35%]"
+            src="https://images.pexels.com/photos/90317/pexels-photo-90317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Hotel Room"
+          />
+          <div class="py-7 px-6">
+            <h1 class="text-2xl font-bold text-gray-800">Problem Solving</h1>
+            <hr class="mt-3 mb-5" />
+            <p>
+              Lorem ipsum dolor sit amet, adipiscing elit. Vestibulum fermentum
+              tortor... consectetuer adipiscing elit. Vestibulum fermentum
+              tortor..
+            </p>
+          </div>
+        </div>
+        <div
+          class="shadow-lg bg-white rounded-md max-w-xs mx-auto relative pt-12"
+        >
+          <img
+            class="h-24 w-24 absolute rounded-full top-[-35px] left-[35%]"
+            src="https://images.pexels.com/photos/90317/pexels-photo-90317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Hotel Room"
+          />
+          <div class="py-7 px-6">
+            <h1 class="text-2xl font-bold text-gray-800">Problem Solving</h1>
+            <hr class="mt-3 mb-5" />
+            <p>
+              Lorem ipsum dolor sit amet, adipiscing elit. Vestibulum fermentum
+              tortor... consectetuer adipiscing elit. Vestibulum fermentum
+              tortor..
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav
+        class="mx-auto flex flex-col md:flex-row max-w-7xl items-start justify-between p-6 lg:px-8 py-8 gap-y-6 md:g-0"
+        aria-label="Global"
+      >
+        <div class="flex flex-col gap-y-6">
+          <h3 class="font-bold">Get Our App</h3>
+          <div class="flex gap-x-6">
+            <a href="#">
+              <img src="./assest/images/googlePlay.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="./assest/images/appStore.svg" alt="" />
+            </a>
+          </div>
+          <div class="">
+            <img class="h-12 w-auto" src="./assest/images/logo.svg" alt="logo"/>
+          </div>
+        </div>
+
+        <div
+          class="flex-col md:flex-row lg:justify-end group relative flex gap-y-6 md:gap-x-6 rounded-lg text-sm leading-6 hover:bg-gray-50"
+        >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Features</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Marketplace</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Company</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Company</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Company</a
+          >
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
