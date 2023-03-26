@@ -11,3 +11,4 @@
     right: -1000px !important;
     transition: 1s ease-in-out;
   }
+  html,body{ scroll-behavior: smooth} 
